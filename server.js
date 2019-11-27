@@ -16,12 +16,13 @@ app.set('secretKey', 'nodeRestApi'); // jwt secret token
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/customizeRestaurant", { useNewUrlParser: true });
 
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
-else{
-  app.use(express.static("public"));
-}
+if (process.env.NODE_ENV === "production") app.use(express.static("client/build"));
+
+app.use(express.static("public"));
+
+app.get('*', (request, response) => {
+    response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  });
 
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({extended: false}));
