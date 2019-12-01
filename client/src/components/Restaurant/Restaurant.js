@@ -37,7 +37,9 @@ class Restaurants extends Component {
     API.getRestaurant(this.props.match.params.username).then(({data}) => {
         console.log("Data from database");
         console.log(data);
-        if (this.Auth.loggedIn()) this.setState({restaurant: data.restaurant, edit: data.id === this.Auth.getProfile().id});
+        if (this.Auth.loggedIn()) {
+          this.setState({restaurant: data.restaurant, edit: data.id === this.Auth.getProfile().id});
+        }
         else this.setState({restaurant: data.restaurant, edit: false});
         setTimeout(() => console.log(this.state), 3000)
     })

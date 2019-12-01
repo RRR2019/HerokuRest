@@ -27,7 +27,12 @@ class Login extends Component {
     componentWillMount(){
         if(this.Auth.loggedIn()){
             this.props.history.push("/"+this.Auth.getProfile().username);
+            console.log(this.props.history)
         }
+    }
+
+    register(){
+        this.props.history.push("/"+"register");
     }
 
     handleInputChange = (event) => {
@@ -135,7 +140,7 @@ class Login extends Component {
                         }
                         </FormGroup>
                         <Button bsStyle="primary" onClick={this.login} href="/:username">Log In!</Button>
-                        <Button bsStyle="secondary"  href="/register">Register!</Button>
+                        <Button bsStyle="secondary" onClick={this.register} href="/register">Register!</Button>
                         <p>{this.state.message}</p>
 
                     </div>
