@@ -46,8 +46,8 @@ class EditableContent extends Component {
                 this.state.edit
                 ?
                 <div>
-                    <input type="text" placeholder="Enter Here" style={{backgroundColor: "black"}, {width: "500px"}} onChange={this.handleChange}/>
-                    <button style={{backgroundColor:"black"}} onClick={this.handleSubmit}>Save</button> 
+                    <input type="text" placeholder="Enter Here" style={{backgroundColor: "blue", width: "500px"}} onChange={this.handleChange}/>
+                    <button style={{backgroundColor:"blue"}} onClick={this.handleSubmit}>Save</button> 
                 </div>
                 :
                 <div onClick={this.changeEditState}>
