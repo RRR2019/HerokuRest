@@ -100,7 +100,6 @@ class Restaurants extends Component {
                 <li><a href="#reservation">Reservations</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
-                {this.state.edit ? ( <div dangerouslySetInnerHTML={ {__html: "<button className='edit-btn' id='userEdit' onclick='editFunction(id)' type='submit' name='submit' value='Edit'> Edit</button>"} } />) : null}
                
                 
             </ul>

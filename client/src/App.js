@@ -12,7 +12,7 @@ function App() {
 	  <Router>
 		<div>
 		  <Switch>
-		  	<Route exact path="/" component={withRouter(Authenticate)} />
+		  	<Route exact path="/" component={withRouter(Register)} />
 			<Route path= "/register" component={withRouter(Register)} />
 			<Route path="/login" component={withRouter(Authenticate)} />
 			<Route path="/:username" component={withRouter(Restaurants)} />
