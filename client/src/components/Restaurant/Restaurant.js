@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import AuthService from '../AuthService';
 import API from "../../utils/API";
+import { withRouter } from 'react-router-dom';
 import EditableContent from "../EditableContent/EditableContent";
 
 class Restaurants extends Component {
@@ -470,4 +471,4 @@ class Restaurants extends Component {
 
 }
 
-export default Restaurants;
+export default withRouter(Restaurants);
