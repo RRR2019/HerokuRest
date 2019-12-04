@@ -77,7 +77,7 @@ class Restaurants extends Component {
       </div>
     </div>
     <div className="col-md-4 col-sm-4">
-      <span className="fa fa-phone top-call" aria-hidden="true">{this.state.restaurant.userTel}</span>
+      {/* <span className="fa fa-phone top-call" aria-hidden="true">{this.state.restaurant.userTel}</span> */}
       {/* <div className="top-call" id="userNumber"> <i className="fa fa-phone" aria-hidden="true"></i>000 000 00000</div> */}
     </div>
   </div>
@@ -438,9 +438,9 @@ class Restaurants extends Component {
       <li className="fa fa-map-marker" aria-hidden="true">{this.state.restaurant.userRestaurantAddress}</li>
       </EditableContent>
     {/* <li><i className="fa fa-map-marker" id="userRestaurantAddress" aria-hidden="true"></i>Your Restaurant Address</li> */}
-    <EditableContent handleSubmit={this.handleSubmit} propertyName="userTel" restaurantObject={this.state.restaurant}>
+    {/* <EditableContent handleSubmit={this.handleSubmit} propertyName="userTel" restaurantObject={this.state.restaurant}>
     <li className="fa fa-phone" aria-hidden="true">{this.state.restaurant.userTel}</li>
-    </EditableContent>
+    </EditableContent> */}
     {/* <li><i className="fa fa-phone" id="userNumber" aria-hidden="true"></i>000 000 00000</li> */}
     <EditableContent handleSubmit={this.handleSubmit} propertyName="userEmail" restaurantObject={this.state.restaurant}>
     <li className="fa fa-envelope-o" aria-hidden="true">{this.state.restaurant.userEmail}</li>
