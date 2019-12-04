@@ -1,8 +1,11 @@
 #Login {
     margin: 0 auto;
     border-style: solid;
+    border-color: rgb(57, 75, 75);
+    box-shadow: 10px 10px 5px grey;
     margin-top: 70px;
     max-width: 400px;
     padding: 40px 40px;
     background: #fff
 }
+

@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import AuthService from '../AuthService';
 import API from "../../utils/API";
+import { withRouter } from 'react-router-dom';
 import EditableContent from "../EditableContent/EditableContent";
+import "../EditableContent/EditableContent.css"
 
 class Restaurants extends Component {
     constructor(props) {
@@ -101,6 +103,7 @@ class Restaurants extends Component {
           <li><a href="#reservation">Reservations</a></li>
           <li><a href="#testimonials">Reviews</a></li>
           <li><a href="#contact">Contact</a></li>
+          <button type="button" className="form-submit" onClick={this.handleLogout.bind(this)}>Logout</button>
       </ul> 
   </div>
   </nav>
@@ -120,7 +123,7 @@ class Restaurants extends Component {
       <div className="container">
         <div className="carousel-caption">
                 <EditableContent handleSubmit={this.handleSubmit} propertyName="userRestaurantName" restaurantObject={this.state.restaurant}>
-                <h1>{this.state.restaurant.userRestaurantName}</h1>
+                <h1 id="restName">{this.state.restaurant.userRestaurantName}</h1>
                 </EditableContent>
                 <EditableContent handleSubmit={this.handleSubmit} propertyName="userRestaurantTagline" restaurantObject={this.state.restaurant}>
                 <p>{this.state.restaurant.userRestaurantTagline}</p>
@@ -131,7 +134,7 @@ class Restaurants extends Component {
     <div className="item"> <img src="assets/img/slider/slider_02.jpg" className="img-responsive"/>
       <div className="container">
         <div className="carousel-caption">
-          <h1>{this.state.restaurant.userRestaurantName}</h1>
+          <h1 id="restName">{this.state.restaurant.userRestaurantName}</h1>
 
           <p>{this.state.restaurant.userRestaurantTagline}</p>
 
@@ -141,7 +144,7 @@ class Restaurants extends Component {
     <div className="item"> <img src="assets/img/slider/slider_03.jpg" className="img-responsive"/>
       <div className="container">
         <div className="carousel-caption">
-        <h1>{this.state.restaurant.userRestaurantName} </h1>
+        <h1 id="restName">{this.state.restaurant.userRestaurantName} </h1>
         <div></div>
 
           <p>{this.state.restaurant.userRestaurantTagline}</p>
@@ -162,7 +165,7 @@ class Restaurants extends Component {
 <div className="gap"></div>
 <div className="col-md-6">
   <div className="about-content">
-    Welcome to <span className="about-content">{this.state.restaurant.userRestaurantName}</span>
+    Welcome to <h4 id="edit" className="about-content">{this.state.restaurant.userRestaurantName}</h4>
     {/* <h4>Welcome to <span id="userRestaurantName4">Name of Your Restaurant Goes Here</span></h4> */}
     <EditableContent handleSubmit={this.handleSubmit} propertyName="userRestaurantAboutText" restaurantObject={this.state.restaurant}>
       <p className="about-content">{this.state.restaurant.userRestaurantAboutText}</p>
@@ -196,10 +199,10 @@ class Restaurants extends Component {
     <div className="clearfix"></div>
     <div className="title-line"></div>
     <ul id="filters" className="clearfix">
-    <EditableContent handleSubmit={this.handleSubmit} propertyName="userAppetizerHeader" restaurantObject={this.state.restaurant}>
+    {/* <EditableContent handleSubmit={this.handleSubmit} propertyName="userAppetizerHeader" restaurantObject={this.state.restaurant}>
           <span className="filter" data-filter=".Appetizers">{this.state.restaurant.userAppetizerHeader}</span>
-          </EditableContent>
-      {/* <li><span id="userAppetizerHeader" className="filter" data-filter=".Appetizers">Appetizers</span></li> */}
+          </EditableContent> */}
+      <li><span id="userAppetizerHeader" className="filter" data-filter=".Appetizers">Appetizers</span></li>
       <li><span id="userSaladsHeader" className="filter" data-filter=".Salads">Soup and Salads</span></li>
       <li><span id="userMainsHeader" className="filter" data-filter=".Soups">Mains</span></li>
       <li><span id="userDessertsHeader" className="filter" data-filter=".Fried-Rice-Dishes">Desserts</span></li>
@@ -462,7 +465,7 @@ class Restaurants extends Component {
 
 </div>
 
-          <button type="button" className="form-submit" onClick={this.handleLogout.bind(this)}>Logout</button>
+        
 
       </div>
   )
@@ -470,4 +473,4 @@ class Restaurants extends Component {
 
 }
 
-export default Restaurants;
+export default withRouter(Restaurants);
