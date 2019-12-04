@@ -52,7 +52,7 @@ const RestaurantSchema = new Schema({
     trim: true,
     default: "Your Restaurant Address",
   },
-  userNumber: {
+  userTel: {
     type: String,
     trim: true,
     default: "000 000 0000",
