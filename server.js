@@ -16,9 +16,9 @@ app.set('secretKey', 'nodeRestApi'); // jwt secret token
 // connection to mongodb
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/customizeRestaurant", { useNewUrlParser: true });
 
-// if (process.env.NODE_ENV === "production") {
-//   app.use(express.static("client/build"));
-// }
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 
 app.use(express.static("public"));
 
@@ -26,15 +26,14 @@ app.use(express.static("public"));
 //     res.sendFile(path.join(__dirname + 'index.html'));
 //   });
 
-if (process.env.NODE_ENV === 'production') {
-  // Serve any static files
-  app.use(express.static("client/build"));
-  // app.use(express.static(path.join(__dirname, 'client/build')));
-// Handle React routing, return all requests to React app
-  app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-  });
-}
+// if (process.env.NODE_ENV === 'production') {
+//   // Serve any static files
+//   // app.use(express.static(path.join(__dirname, 'client/build')));
+// // Handle React routing, return all requests to React app
+//   app.get('*', function(req, res) {
+//     res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+//   });
+// }
 
 
 app.use(bodyParser.json()); // support json encoded bodies
