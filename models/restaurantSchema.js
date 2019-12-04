@@ -56,6 +56,11 @@ const RestaurantSchema = new Schema({
     type: String,
     trim: true,
     default: "000 000 0000",
+  },
+  userEmail: {
+    type: String,
+    trim: true,
+    default: "info@restaurant.com",
   }
 });
 

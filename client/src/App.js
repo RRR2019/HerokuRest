@@ -13,9 +13,9 @@ function App() {
 		<div>
 		  <Switch>
 		  	<Route exact path="/" component={withRouter(Register)} />
-			<Route exact path= "/register" component={withRouter(Register)} />
-			<Route exact path="/login" component={withRouter(Authenticate)} />
-			<Route exact path="/:username" component={withRouter(Restaurants)} />
+			<Route path= "/register" component={withRouter(Register)} />
+			<Route path="/login" component={withRouter(Authenticate)} />
+			<Route path="/:username" component={withRouter(Restaurants)} />
 		  </Switch>
 		</div>
 	  </Router>

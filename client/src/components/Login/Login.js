@@ -5,6 +5,7 @@ import { isEmail, isEmpty } from "../../shared/validator";
 // import API from "../../utils/API"
 import { withRouter } from 'react-router-dom';
 import AuthService from '../AuthService';
+import Jumbotron from '../Jumbotron/Jumbotron.js';
 
 
 class Login extends Component {
@@ -119,7 +120,8 @@ class Login extends Component {
         const { errors, formSubmitted } = this.state;
 
         return (
-            
+            <div>
+            <Jumbotron/>
             <div id="Login" >
                 
                 <Row>
@@ -145,6 +147,7 @@ class Login extends Component {
 
                     </div>
                 </Row>
+            </div>
             </div>
         )
     }

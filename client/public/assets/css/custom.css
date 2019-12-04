@@ -499,6 +499,9 @@ a{
 .page-title-container .breadcrumb > .active{
 	color:#ccc;
 }
+#restName{
+	font-size: 8em;
+}
 
 @media (min-width: 768px){
 .navigation .navbar-nav > li:hover > .dropdown-menu{ display:inline-block;}
@@ -540,6 +543,7 @@ a{
 .order-online img{ max-width:100%;}
 }
 
+/* 
 @import "bourbon";
 
 // variables - colors
@@ -640,7 +644,7 @@ Primary style
 
 -------------------------------- */
 
-html * {
+/* html * {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -674,7 +678,7 @@ input, textarea {
 	&::-ms-clear {
     	display: none;
 	}
-}
+} */
 
 /* -------------------------------- 
 
@@ -682,17 +686,17 @@ Main components
 
 -------------------------------- */
 
-header[role=banner] {
+/* header[role=banner] {
 	position: relative;
 	height: $header-height-S;
 	background: $color-1;
 
 	#cd-logo {
 		float: left;
-		margin: 4px 0 0 5%;
+		margin: 4px 0 0 5%; */
 
 		/* reduce logo size on mobile and make sure it is left aligned with the transform-origin property */
-		@include transform-origin(0 50%);
+		/* @include transform-origin(0 50%);
 		@include transform(scale(.8));
 
 		img {
@@ -701,12 +705,12 @@ header[role=banner] {
 	}
 
 	&::after { /* clearfix */
-		content: '';
+		/* content: '';
 		display: table;
 		clear: both;
-	}
+	} */ 
 
-	@include MQ(M) {
+	/* @include MQ(M) {
 		height: $header-height-M;
 
 		#cd-logo {
@@ -790,4 +794,4 @@ header[role=banner] {
 				border: none;
 			}
 		}
-	}
+	} */ 

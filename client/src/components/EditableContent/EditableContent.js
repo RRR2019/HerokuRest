@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import API from "../../utils/API";
 import AuthService from "../AuthService";
 
+
 class EditableContent extends Component {
     constructor(props) {
         super(props);
@@ -45,9 +46,9 @@ class EditableContent extends Component {
             {
                 this.state.edit
                 ?
-                <div>
-                    <input type="text" placeholder="Enter Here" style={{backgroundColor: "blue", width: "500px"}} onChange={this.handleChange}/>
-                    <button style={{backgroundColor:"blue"}} onClick={this.handleSubmit}>Save</button> 
+                <div className="editable-content">
+                    <input type="text" placeholder="Enter Here" className="editable-content-input" onChange={this.handleChange}/>
+                    <button className="editable-content-button" onClick={this.handleSubmit}>Save</button> 
                 </div>
                 :
                 <div onClick={this.changeEditState}>

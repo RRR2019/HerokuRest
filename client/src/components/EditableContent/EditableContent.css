@@ -1,0 +1,27 @@
+.editable-content {
+    display: flex;
+}
+.editable-content-input {
+    flex-grow: 1;
+    font-size: 40px;
+    font-weight: 700;
+    height: 100%;
+    background-color: rgba(255,255,255,.2);
+    color: inherit;
+    border: 1px solid white;
+    text-align: center;
+}
+.editable-content-input::placeholder {
+    text-align: center;
+    color: inherit;
+    font-size: 40px;
+}
+.editable-content-input:focus {
+    outline: none;
+}
+.editable-content-input:focus::placeholder{
+    color:transparent;
+}
+.editable-content-button {
+    background-color: blue;
+}
